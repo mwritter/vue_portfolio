@@ -3,15 +3,18 @@
     <div id="profile_picture"></div>
     <h3>Hi my name's Matthew Ritter</h3>
     <Profile />
+    <Contact />
   </div>
 </template>
 
 <script>
 import Profile from "./components/Profile";
+import Contact from "./components/Contact";
 export default {
   name: "app",
   components: {
-    Profile
+    Profile,
+    Contact
   }
 };
 </script>
@@ -25,8 +28,8 @@ export default {
 #app {
   display: grid;
   justify-items: center;
-  padding: 3rem 2rem;
-  height: 100vh;
+  padding: 3rem 0;
+  height: 100%;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -47,10 +50,15 @@ export default {
 .info-section {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
   justify-content: center;
   text-align: center;
   background-color: rgba(232, 232, 232, 0.3);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
+}
+.info-section .info-heading {
+  justify-self: start;
 }
 </style>
