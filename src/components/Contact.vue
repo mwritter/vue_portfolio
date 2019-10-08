@@ -1,7 +1,7 @@
 <template>
   <div class="info-section">
-    <form id="contact-form">
-      <h3 class="info-heading">Contact me</h3>
+    <h3 class="info-heading">Contact me</h3>
+    <form @click.prevent id="contact-form">
       <input type="email" placeholder="email" />
       <input type="text" placeholder="subject" />
       <textarea type="text" rows="10" placeholder="message" />
@@ -18,10 +18,11 @@ export default {};
 #contact-form {
   display: grid;
   grid-gap: 1rem;
+  margin-top: 1rem;
 }
 #contact-form input,
 textarea {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem;
   border-radius: 1.2rem;
   border-style: none;
   border: 1px solid rgba(97, 97, 97, 0);

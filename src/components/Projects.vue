@@ -1,0 +1,158 @@
+<template>
+  <div class="info-section">
+    <h3>Projects</h3>
+    <div id="project">
+      <img
+        :src="require(`../assets/${projects[currentIndex].image}`)"
+        :alt="projects[currentIndex].title"
+      />
+      <div id="project-info">
+        <span class="heading">{{ projects[currentIndex].title }}</span>
+        <h4>Description</h4>
+        <span class="sub-heading">{{ projects[currentIndex].description }}</span>
+        <h4>Tools</h4>
+        <span class="sub-heading">{{ projects[currentIndex].tools | toolString}}</span>
+      </div>
+    </div>
+    <div id="controls">
+      <div class="arrow-area" @click="prevProject()">
+        <i class="lni-chevron-left size-sm"></i>
+      </div>
+      <div id="indicator">
+        <div
+          v-for="(project, index) in projects"
+          :key="index"
+          class="dot"
+          :class="{'active-dot': index == currentIndex}"
+        ></div>
+      </div>
+      <div class="arrow-area" @click="nextProject()">
+        <i class="lni-chevron-right size-sm"></i>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      currentIndex: 0,
+      projects: [
+        {
+          title: "Connecty",
+          image: "connecty_preview.png",
+          description:
+            "Web Application built as a social media site for developers to connect. As of now, users can sign up and login, and are directed to a default profile page. Created UI with React components. Created backend endpoints to interact with MLab database. Implemented JWT token based authentication for logging in registered users. Deployed on Heroku.",
+          tools: ["React", "Express", "Node", "Bootstrap", "Rest API", "Github"]
+        },
+        {
+          title: "Ticket Event Web Application",
+          image: "event-maker.png",
+          description:
+            "Web application for creating events and assigning tickets." +
+            "Created web application in .NET and C#. Implemented fully responsive design for desktop and mobile.",
+          tools: [".NET", "C#", "CSS", "Github"]
+        },
+        {
+          title: "Weather Web App",
+          image: "weather-preview.png",
+          description:
+            "Web Application built with React and Redux to get the temperature, pressure, and humidity from https://openweathermap.org/api, also uses Google Maps API to show searched location. Created UI with React components. Implemented API’s into React project. Managed web application state with Redux.",
+          tools: ["React", "Redux", "Node", "Bootstrap", "API", "Github"]
+        },
+        {
+          title: "Flutter Meal Plan App",
+          image: "event-maker.png",
+          description:
+            "Cross-Platform application for create meal plans and a shopping list based on each meal plan. Contributed to and Managed code base using new framework – Flutter. Created a Cloud Database backend with Firebase and Firestore. Implemented Firebase Authentication to sign up and login users. Designed material-based UI and UX.",
+          tools: ["Flutter", "Dart", "Github"]
+        },
+        {
+          title: "Java Member Application",
+          image: "java-preview.png",
+          description:
+            "Application for creating and maintaining groups with members. Worked with a team in an Agile environment to complete project. Managed issues, backlog, and assigning tasks to team members. Contributed to user friendly Graphical User Interface for project.",
+          tools: ["Java", "JavaFX", "JUnit", "Github"]
+        },
+        {
+          title: "Python Data Visualization",
+          image: "python-1.png",
+          description: "Packet transmission simulation, and data visualization",
+          tools: ["Python", "Matplotlib", "Github"]
+        }
+      ]
+    };
+  },
+  methods: {
+    nextProject() {
+      const n = this.projects.length;
+      let index = this.currentIndex + 1;
+      index = index % n;
+      this.currentIndex = index;
+    },
+    prevProject() {
+      const n = this.projects.length;
+      let index = this.currentIndex - 1;
+      if (index < 0) {
+        index = ((index % n) + n) % n;
+      } else {
+        index = index % n;
+      }
+      this.currentIndex = index;
+    }
+  },
+  filters: {
+    toolString(value) {
+      return value.join(" | ");
+    }
+  }
+};
+</script>
+
+<style>
+#project {
+  display: flex;
+  align-content: start;
+}
+#project img {
+  width: 300px;
+  margin: 1rem;
+}
+#project-info h4 {
+  margin-top: 0.75rem;
+}
+.heading {
+  font-size: 2rem;
+}
+.sub-heading {
+}
+#controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+#indicator {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+.dot {
+  border-radius: 50%;
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0 0.2rem;
+  background-color: rgb(110, 110, 110);
+  opacity: 0.2;
+  cursor: pointer;
+}
+.active-dot {
+  opacity: 1;
+}
+.arrow-area {
+  padding: 0.4rem;
+  font-size: 24;
+  cursor: pointer;
+}
+</style>
