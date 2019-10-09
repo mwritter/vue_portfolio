@@ -76,9 +76,9 @@ body {
 
 .info-section #project img {
   border-radius: 1.2rem;
-  -webkit-box-shadow: 5px 5px 25px 0px rgb(158, 158, 158);
-  -moz-box-shadow: 5px 5px 25px 0px rgb(158, 158, 158);
-  box-shadow: 5px 5px 25px 0px rgb(158, 158, 158);
+  -webkit-box-shadow: 5px 5px 10px 0px rgb(158, 158, 158);
+  -moz-box-shadow: 5px 5px 10px 0px rgb(158, 158, 158);
+  box-shadow: 5px 5px 10px 0px rgb(158, 158, 158);
   height: 200px;
 }
 

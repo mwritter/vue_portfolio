@@ -1,19 +1,19 @@
 <template>
   <div class="info-section">
     <h3>Projects</h3>
-    <div id="project">
-      <img
-        :src="require(`../assets/${projects[currentIndex].image}`)"
-        :alt="projects[currentIndex].title"
-      />
-      <div id="project-info">
-        <span class="heading">{{ projects[currentIndex].title }}</span>
-        <h4>Description</h4>
-        <span class="sub-heading">{{ projects[currentIndex].description }}</span>
-        <h4>Tools</h4>
-        <span class="sub-heading">{{ projects[currentIndex].tools | toolString}}</span>
+    <div id="holder" v-for="(project, index) in projects" :key="project.title">
+      <div id="project" class="animated fadeIn" v-if="index == currentIndex">
+        <img :src="require(`../assets/${project.image}`)" :alt="project.title" />
+        <div id="project-info">
+          <span class="heading">{{ project.title }}</span>
+          <h4>Description</h4>
+          <span class="sub-heading">{{ project.description }}</span>
+          <h4>Tools</h4>
+          <span class="sub-heading">{{ project.tools | toolString}}</span>
+        </div>
       </div>
     </div>
+
     <div id="controls">
       <div class="arrow-area" @click="prevProject()">
         <i class="lni-chevron-left size-sm"></i>
@@ -37,13 +37,15 @@
 export default {
   data() {
     return {
+      next: true,
+      prev: false,
       currentIndex: 0,
       projects: [
         {
           title: "Connecty",
           image: "connecty_preview.png",
           description:
-            "Web Application built as a social media site for developers to connect. As of now, users can sign up and login, and are directed to a default profile page. Created UI with React components. Created backend endpoints to interact with MLab database. Implemented JWT token based authentication for logging in registered users. Deployed on Heroku.",
+            "Web Application built as a social media site for developers to connect.  Users can sign up and login, and are directed to a default profile page. Created UI with React components. Created backend endpoints to interact with MLab database. Implemented JWT token based authentication for logging in registered users. Deployed on Heroku.",
           tools: ["React", "Express", "Node", "Bootstrap", "Rest API", "Github"]
         },
         {
@@ -111,12 +113,15 @@ export default {
 </script>
 
 <style>
+#holder {
+  overflow: hidden;
+}
 #project {
   display: flex;
   align-content: start;
 }
 #project img {
-  width: 300px;
+  min-width: 300px;
   margin: 1rem;
 }
 #project-info h4 {
