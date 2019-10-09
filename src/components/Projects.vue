@@ -1,18 +1,24 @@
 <template>
   <div class="info-section">
     <h3>Projects</h3>
-    <div id="holder" v-for="(project, index) in projects" :key="project.title">
-      <div id="project" class="animated fadeIn" v-if="index == currentIndex">
-        <img :src="require(`../assets/${project.image}`)" :alt="project.title" />
+    <transition name="fade" mode="out-in">
+      <div id="project" :key="currentProject.title">
+        <div>
+          <img :src="require(`../assets/${currentProject.image}`)" :alt="currentProject.title" />
+        </div>
         <div id="project-info">
-          <span class="heading">{{ project.title }}</span>
-          <h4>Description</h4>
-          <span class="sub-heading">{{ project.description }}</span>
-          <h4>Tools</h4>
-          <span class="sub-heading">{{ project.tools | toolString}}</span>
+          <span class="heading">{{ currentProject.title }}</span>
+          <div id="description">
+            <h4>Description</h4>
+            <span class="sub-heading">{{ currentProject.description }}</span>
+          </div>
+          <div id="tools">
+            <h4>Tools</h4>
+            <span class="sub-heading">{{ currentProject.tools | toolString }}</span>
+          </div>
         </div>
       </div>
-    </div>
+    </transition>
 
     <div id="controls">
       <div class="arrow-area" @click="prevProject()">
@@ -86,6 +92,11 @@ export default {
       ]
     };
   },
+  computed: {
+    currentProject() {
+      return this.projects[this.currentIndex];
+    }
+  },
   methods: {
     nextProject() {
       const n = this.projects.length;
@@ -113,24 +124,24 @@ export default {
 </script>
 
 <style>
-#holder {
-  overflow: hidden;
-}
 #project {
-  display: flex;
-  align-content: start;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "image info";
 }
 #project img {
-  min-width: 300px;
+  grid-area: image;
   margin: 1rem;
+  border: 1px solid black;
+}
+#project-info {
+  grid-area: info;
 }
 #project-info h4 {
   margin-top: 0.75rem;
 }
 .heading {
   font-size: 2rem;
-}
-.sub-heading {
 }
 #controls {
   display: flex;
@@ -159,5 +170,17 @@ export default {
   padding: 0.4rem;
   font-size: 24;
   cursor: pointer;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-to,
+.fade-leave {
+  opacity: 1;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity, 175ms ease-in-out;
 }
 </style>

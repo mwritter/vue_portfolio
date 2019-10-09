@@ -82,6 +82,7 @@ body {
   height: 200px;
 }
 
+/* For desktop or larger than mobile */
 @media screen and (min-width: 700px) {
   #app {
     padding: 3rem 2rem;
@@ -99,6 +100,21 @@ body {
   #contact-form #submit {
     justify-self: start;
     padding: 0.75rem 1.5rem;
+  }
+}
+/* For mobile */
+@media screen and (max-width: 700px) {
+  #description {
+    display: none;
+  }
+  #project {
+    grid-template-columns: 1fr;
+    height: 25rem;
+    justify-content: center;
+    text-align: center;
+    grid-template-areas:
+      "image"
+      "info";
   }
 }
 </style>
