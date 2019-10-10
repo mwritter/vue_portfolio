@@ -3,7 +3,7 @@
     <h3>Projects</h3>
     <transition name="fade" mode="out-in">
       <div id="project" :key="currentProject.title">
-        <div>
+        <div id="project-image">
           <img :src="require(`../assets/${currentProject.image}`)" :alt="currentProject.title" />
         </div>
         <div id="project-info">
@@ -71,7 +71,7 @@ export default {
         },
         {
           title: "Flutter Meal Plan App",
-          image: "event-maker.png",
+          image: "flutter_preview.png",
           description:
             "Cross-Platform application for create meal plans and a shopping list based on each meal plan. Contributed to and Managed code base using new framework – Flutter. Created a Cloud Database backend with Firebase and Firestore. Implemented Firebase Authentication to sign up and login users. Designed material-based UI and UX.",
           tools: ["Flutter", "Dart", "Github"]
@@ -132,7 +132,6 @@ export default {
 #project img {
   grid-area: image;
   margin: 1rem;
-  border: 1px solid black;
 }
 #project-info {
   grid-area: info;

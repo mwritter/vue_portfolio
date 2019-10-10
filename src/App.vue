@@ -23,6 +23,9 @@ export default {
 </script>
 
 <style>
+:root {
+  --shadow-color: rgba(116, 116, 116, 0.932);
+}
 html,
 body {
   height: 100%;
@@ -34,6 +37,7 @@ body {
 }
 #app {
   display: grid;
+  grid-gap: 1rem;
   justify-items: center;
   padding: 3rem 0;
   min-height: 100vh;
@@ -41,13 +45,13 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(
       to bottom right,
-      rgba(75, 138, 184, 0.55) 50%,
-      rgba(129, 217, 175, 0.62)
+      rgba(52, 143, 207, 0.55) 35%,
+      rgba(135, 202, 168, 0.5)
     )
     fixed;
 }
@@ -55,11 +59,14 @@ body {
   background: url("./assets/profile_picture.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  border: 3px solid rgb(170, 197, 216);
-  width: 200px;
-  height: 200px;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
+  -webkit-box-shadow: 5px 5px 15px 0px var(--shadow-color);
+  -moz-box-shadow: 5px 5px 15px 0px var(--shadow-color);
+  box-shadow: 5px 5px 15px 0px var(--shadow-color);
 }
+
 .info-section {
   display: flex;
   flex-direction: column;
@@ -76,10 +83,10 @@ body {
 
 .info-section #project img {
   border-radius: 1.2rem;
-  -webkit-box-shadow: 5px 5px 10px 0px rgb(158, 158, 158);
-  -moz-box-shadow: 5px 5px 10px 0px rgb(158, 158, 158);
-  box-shadow: 5px 5px 10px 0px rgb(158, 158, 158);
-  height: 200px;
+  -webkit-box-shadow: 5px 5px 10px 0px var(--shadow-color);
+  -moz-box-shadow: 5px 5px 10px 0px var(--shadow-color);
+  box-shadow: 5px 5px 10px 0px var(--shadow-color);
+  height: 18rem;
 }
 
 /* For desktop or larger than mobile */
@@ -115,6 +122,10 @@ body {
     grid-template-areas:
       "image"
       "info";
+  }
+  .badge-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 </style>

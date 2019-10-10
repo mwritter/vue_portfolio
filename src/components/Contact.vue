@@ -1,11 +1,11 @@
 <template>
   <div class="info-section">
     <h3 class="info-heading">Contact me</h3>
-    <form @click.prevent id="contact-form">
+    <form id="contact-form">
       <input type="email" placeholder="email" />
       <input type="text" placeholder="subject" />
       <textarea type="text" rows="10" placeholder="message" />
-      <button id="submit">Send</button>
+      <button id="submit" @click.prevent>Send</button>
     </form>
   </div>
 </template>
@@ -22,11 +22,15 @@ export default {};
 }
 #contact-form input,
 textarea {
-  padding: 0.75rem;
+  padding: 0.75rem 2rem;
   border-radius: 1.2rem;
   border-style: none;
   border: 1px solid rgba(97, 97, 97, 0);
   outline: none;
+  font-family: "Roboto";
+  font-size: 1.05rem;
+  transition: all 500ms;
+  color: rgba(72, 171, 241, 1);
 }
 #contact-form input:focus,
 textarea:focus {
@@ -37,5 +41,13 @@ textarea:focus {
   border-radius: 1.2rem;
   border-style: none;
   background-color: rgba(143, 209, 133, 1);
+  cursor: pointer;
+  transition: all 300ms;
+}
+#contact-form #submit:focus {
+  outline: none;
+}
+#contact-form #submit:hover {
+  box-shadow: 1px 1px 5px 0px rgba(10, 10, 10, 0.2);
 }
 </style>
