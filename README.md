@@ -1,4 +1,5 @@
 # portfolio
+Portfolio in Vue JS
 
 ## Project setup
 ```
