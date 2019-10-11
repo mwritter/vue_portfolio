@@ -86,7 +86,7 @@ body {
   -webkit-box-shadow: 5px 5px 10px 0px var(--shadow-color);
   -moz-box-shadow: 5px 5px 10px 0px var(--shadow-color);
   box-shadow: 5px 5px 10px 0px var(--shadow-color);
-  height: 15rem;
+  height: 12rem;
 }
 
 /* For desktop or larger than mobile */
@@ -126,6 +126,9 @@ body {
   .badge-row {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+  }
+  .info-section #project img {
+    height: 10rem;
   }
 }
 </style>
