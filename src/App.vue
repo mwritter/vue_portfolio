@@ -86,7 +86,7 @@ body {
   -webkit-box-shadow: 5px 5px 10px 0px var(--shadow-color);
   -moz-box-shadow: 5px 5px 10px 0px var(--shadow-color);
   box-shadow: 5px 5px 10px 0px var(--shadow-color);
-  height: 18rem;
+  height: 15rem;
 }
 
 /* For desktop or larger than mobile */

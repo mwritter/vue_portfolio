@@ -46,8 +46,8 @@ export default {
           title: "Node"
         },
         {
-          image: "bootstrap_badge.png",
-          title: "Bootstrap"
+          image: "vue_badge.png",
+          title: "VueJS"
         },
         {
           image: "python_badge.png",
