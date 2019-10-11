@@ -4,11 +4,10 @@
       I'm a creator. I like to build things and I use software development to do just that. These are the technologies I'm currently working with and have used in my own projects. I'm always
       finding new tools to solve problems, which means I'm always learning new things and I love that about software development.
     </p>
-    <p>{{totalWidth}}</p>
 
     <div class="badge-row">
       <div class="badge" v-for="(badge, index) in badges" :key="index">
-        <img :src="require(`../assets/${badge.image}`)" :alt="badge.title" />
+        <img :src="require(`../assets/${badge.image}`)" :alt="badge.title" :title="badge.title" />
       </div>
     </div>
   </div>
@@ -18,8 +17,6 @@
 export default {
   data() {
     return {
-      rowCount: 1,
-      totalWidth: window.innerWidth,
       badges: [
         {
           image: "js_badge.png",
