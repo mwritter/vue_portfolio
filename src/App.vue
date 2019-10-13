@@ -56,7 +56,7 @@ body {
     fixed;
 }
 #profile_picture {
-  background: url("./assets/profile_picture.webp") no-repeat;
+  background: url("./assets/profile_picture.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   width: 12rem;
@@ -82,6 +82,8 @@ body {
 }
 
 .info-section #project img {
+  opacity: 1;
+  transition: opacity 500ms;
   border-radius: 1.2rem;
   -webkit-box-shadow: 5px 5px 10px 0px var(--shadow-color);
   -moz-box-shadow: 5px 5px 10px 0px var(--shadow-color);

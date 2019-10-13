@@ -49,14 +49,14 @@ export default {
       projects: [
         {
           title: "Connecty",
-          image: "connecty_preview.webp",
+          image: "connecty_preview.png",
           description:
             "Web Application built as a social media site for developers to connect.  Users can sign up and login, and are directed to a default profile page. Created UI with React components. Created backend endpoints to interact with MLab database. Implemented JWT token based authentication for logging in registered users. Deployed on Heroku.",
           tools: ["React", "Express", "Node", "Bootstrap", "Rest API", "Github"]
         },
         {
           title: "Ticket Event Web Application",
-          image: "event-maker.webp",
+          image: "event-maker.png",
           description:
             "Web application for creating events and assigning tickets." +
             "Created web application in .NET and C#. Implemented fully responsive design for desktop and mobile.",
@@ -64,28 +64,28 @@ export default {
         },
         {
           title: "Weather Web App",
-          image: "weather-preview.webp",
+          image: "weather-preview.png",
           description:
             "Web Application built with React and Redux to get the temperature, pressure, and humidity from https://openweathermap.org/api, also uses Google Maps API to show searched location. Created UI with React components. Implemented API’s into React project. Managed web application state with Redux.",
           tools: ["React", "Redux", "Node", "Bootstrap", "API", "Github"]
         },
         {
           title: "Flutter Meal Plan App",
-          image: "flutter_preview.webp",
+          image: "flutter_preview.png",
           description:
             "Cross-Platform application for create meal plans and a shopping list based on each meal plan. Contributed to and Managed code base using new framework – Flutter. Created a Cloud Database backend with Firebase and Firestore. Implemented Firebase Authentication to sign up and login users. Designed material-based UI and UX.",
           tools: ["Flutter", "Dart", "Github"]
         },
         {
           title: "Java Member Application",
-          image: "java-preview.webp",
+          image: "java-preview.png",
           description:
             "Application for creating and maintaining groups with members. Worked with a team in an Agile environment to complete project. Managed issues, backlog, and assigning tasks to team members. Contributed to user friendly Graphical User Interface for project.",
           tools: ["Java", "JavaFX", "JUnit", "Github"]
         },
         {
           title: "Python Data Visualization",
-          image: "python-1.webp",
+          image: "python-1.png",
           description: "Packet transmission simulation, and data visualization",
           tools: ["Python", "Matplotlib", "Github"]
         }
