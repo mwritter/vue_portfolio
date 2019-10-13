@@ -56,7 +56,7 @@ export default {
         },
         {
           title: "Ticket Event Web Application",
-          image: "event-maker.png",
+          image: "event-maker.webp",
           description:
             "Web application for creating events and assigning tickets." +
             "Created web application in .NET and C#. Implemented fully responsive design for desktop and mobile.",
@@ -64,28 +64,28 @@ export default {
         },
         {
           title: "Weather Web App",
-          image: "weather-preview.png",
+          image: "weather-preview.webp",
           description:
             "Web Application built with React and Redux to get the temperature, pressure, and humidity from https://openweathermap.org/api, also uses Google Maps API to show searched location. Created UI with React components. Implemented API’s into React project. Managed web application state with Redux.",
           tools: ["React", "Redux", "Node", "Bootstrap", "API", "Github"]
         },
         {
           title: "Flutter Meal Plan App",
-          image: "flutter_preview.png",
+          image: "flutter_preview.webp",
           description:
             "Cross-Platform application for create meal plans and a shopping list based on each meal plan. Contributed to and Managed code base using new framework – Flutter. Created a Cloud Database backend with Firebase and Firestore. Implemented Firebase Authentication to sign up and login users. Designed material-based UI and UX.",
           tools: ["Flutter", "Dart", "Github"]
         },
         {
           title: "Java Member Application",
-          image: "java-preview.png",
+          image: "java-preview.webp",
           description:
             "Application for creating and maintaining groups with members. Worked with a team in an Agile environment to complete project. Managed issues, backlog, and assigning tasks to team members. Contributed to user friendly Graphical User Interface for project.",
           tools: ["Java", "JavaFX", "JUnit", "Github"]
         },
         {
           title: "Python Data Visualization",
-          image: "python-1.png",
+          image: "python-1.webp",
           description: "Packet transmission simulation, and data visualization",
           tools: ["Python", "Matplotlib", "Github"]
         }
