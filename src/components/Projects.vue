@@ -49,7 +49,7 @@ export default {
       projects: [
         {
           title: "Connecty",
-          image: "connecty_preview.png",
+          image: "connecty_preview.webp",
           description:
             "Web Application built as a social media site for developers to connect.  Users can sign up and login, and are directed to a default profile page. Created UI with React components. Created backend endpoints to interact with MLab database. Implemented JWT token based authentication for logging in registered users. Deployed on Heroku.",
           tools: ["React", "Express", "Node", "Bootstrap", "Rest API", "Github"]

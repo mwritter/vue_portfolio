@@ -56,7 +56,7 @@ body {
     fixed;
 }
 #profile_picture {
-  background: url("./assets/profile_picture.jpg") no-repeat;
+  background: url("./assets/profile_picture.webp") no-repeat;
   background-size: cover;
   background-position: center;
   width: 12rem;
