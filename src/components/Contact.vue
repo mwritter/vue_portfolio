@@ -5,7 +5,7 @@
       <input type="email" name="email" placeholder="email" />
       <textarea type="text" name="message" rows="10" placeholder="message" />
       <div data-netlify-recaptcha="true"></div>
-      <button type="submit" id="submit" @click.prevent>Send</button>
+      <button type="submit" id="submit">Send</button>
     </form>
   </div>
 </template>
