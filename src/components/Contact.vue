@@ -1,11 +1,11 @@
 <template>
   <div class="info-section">
     <h3 class="info-heading">Contact me</h3>
-    <form id="contact-form">
-      <input type="email" placeholder="email" />
-      <input type="text" placeholder="subject" />
-      <textarea type="text" rows="10" placeholder="message" />
-      <button id="submit" @click.prevent>Send</button>
+    <form name="contact" action="POST" data-netlify="true" id="contact-form">
+      <input type="email" name="email" placeholder="email" />
+      <textarea type="text" name="message" rows="10" placeholder="message" />
+      <div data-netlify-recaptcha="true"></div>
+      <button type="submit" id="submit" @click.prevent>Send</button>
     </form>
   </div>
 </template>
